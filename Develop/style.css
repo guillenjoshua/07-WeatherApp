@@ -1,0 +1,61 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.jumbotron {
+    height: 30px;
+    background-color: rgb(2, 154, 255);
+}
+
+.input {
+    padding-top: 20px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+button {
+ background-color: rgb(2, 154, 255);
+ font-size: 29px;
+ padding: 5px;
+ margin-left: 5px;
+}
+
+input[type="text"]{
+height: 34px;
+width: 200px;
+background: #e7e7e7;
+font-weight: bold;
+}
+
+.display {
+    text-align: center;
+}
+
+.container {
+    border: solid;
+    padding-right: 100px; 
+    padding-left: 50px;
+    margin-left: 35%;
+}
+
+.city {
+    padding-bottom: 20px;
+    font-size: large;
+    font-size: 50px;
+}
+
+li {
+    padding: 1rem;
+}
+
+.row {
+    padding-left: 15px;
+    margin-left: 10px;
+}
