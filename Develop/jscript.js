@@ -65,11 +65,14 @@ const results = function results(data){
 }
 
 
-//Keep Display
-for (var i = 0; i < results; i++) {
-  
-  if (localStorage.getItem(i)) {
-      $("#" + i).val(localStorage.getItem(i))
-  }
+
+
+
+function setLocalStorage(){
+
+let store = $("#city").val();
+
+localStorage.setItem('cityName', store); 
 
 }
+
