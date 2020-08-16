@@ -10,8 +10,9 @@ body {
 }
 
 .jumbotron {
-    height: 30px;
+    height: 10px;
     background-color: rgb(2, 154, 255);
+    color: whitesmoke;
 }
 
 .input {
@@ -42,7 +43,14 @@ font-weight: bold;
     border: solid;
     padding-right: 100px; 
     padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 25px;
     margin-left: 35%;
+    background-color: rgb(2, 154, 255);
+    color: whitesmoke;
+    border-radius: 80px;
+    
+    
 }
 
 .city {
@@ -58,4 +66,23 @@ li {
 .row {
     padding-left: 15px;
     margin-left: 10px;
+}
+
+.card {
+
+    background-color: blueviolet;
+}
+
+.row {
+    padding: 1rem;
+}
+
+#displayForecast {
+color: whitesmoke;
+text-align: center;
+
+}
+
+th {
+    color: whitesmoke;
 }
