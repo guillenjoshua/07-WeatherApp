@@ -45,7 +45,7 @@ font-weight: bold;
     padding-left: 50px;
     padding-top: 20px;
     padding-bottom: 25px;
-    margin-left: 35%;
+    margin-left: 21%;
     background-color: rgb(2, 154, 255);
     color: whitesmoke;
     border-radius: 80px;
@@ -65,7 +65,8 @@ li {
 
 .row {
     padding-left: 15px;
-    margin-left: 10px;
+    margin-left: 33%;
+    text-align: center;
 }
 
 .card {
@@ -85,4 +86,9 @@ text-align: center;
 
 th {
     color: whitesmoke;
+}
+
+.hide {
+    display: none;
+
 }

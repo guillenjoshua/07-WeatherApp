@@ -2,77 +2,118 @@
 
 
 $("#enterCity").on("click", function() {
+     
   return getWeather();
 
-  });
+});
 
 
-// Run Ajax with API Key
+// Run API for Current Weather
 
 function getWeather(){
 
-var city = $("#city").val();
-var queryCity = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=6b4758acdbe25a3b3e8b792b8978ee96"
-var queryIVIndex = "http://api.openweathermap.org/data/2.5/uvi?appid=6b4758acdbe25a3b3e8b792b8978ee96" + "&lat={lat}" + "&lon={lon}"
+$(".container").show();
 
+var city = $("#city").val();
+
+var queryCity = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=6b4758acdbe25a3b3e8b792b8978ee96"
 
 if (city != ''){
 
-    $.ajax({
-      url: queryCity, 
-      type: "GET",
-      dataType: "jsonp",
-      success: function(data){
-          var application = results(data) 
+  $.ajax({
+    url: queryCity, 
+    type: "GET",
+    dataType: "jsonp",
+    success: function(data){
+        var application = results(data) 
 
-        $("#displayWeather").html(application);
-        $("#city").val('');
+      $("#displayWeather").html(application);
+      $("#city").val('');
 
+    }
 
-          var forecast = "";
-
-          for (var i=0; i<data.list; i++){
-
-            
-          }
-
-
-
-
-      }
-
-    })
+  })
 
 }
 
 }
 
 
-// Cuurent Weather from OpenWeather
 
-var currentCityDiv = $("#currentCity");
+// Current Weather from OpenWeather
 
 var currentDate = moment().format("MMM Do YY");
 
-const results = function results(data){
-  return "<h2>" + data.name + ", " + data.sys.country + " - " + currentDate + "</h2>" + 
-            "<p>Weather: " + data.weather[0].description + "<img src = http://openweathermap.org/img/wn/" + data.weather[0].icon+ ".png>"  + "</p>" +
-            "<p>Temperature: " + data.main.temp + "&deg;F</p>" +
-            "<p>Humidity: " + data.main.humidity + "%</p>" +
-            "<p>Wind Speed: " + data.wind.speed + " MPH</p>"
+function results(data){
 
-         
+const lat = data.coord.lat
+const lon = data.coord.lon
+
+uvLat = lat
+uvLon = lon
+
+return "<h2>" + data.name + ", " + data.sys.country + " - " + currentDate + "</h2>" + 
+          "<p>Weather: " + data.weather[0].description + "<img src = http://openweathermap.org/img/wn/" + data.weather[0].icon+ ".png>"  + "</p>" +
+          "<p>Temperature: " + data.main.temp + "&deg;F</p>" +
+          "<p>Humidity: " + data.main.humidity + "%</p>" +
+          "<p>Wind Speed: " + data.wind.speed + " MPH</p>" +
+          "<p>lat: " + data.coord.lat + " MPH</p>"
+
+          
+      
 }
 
 
 
+// // Run API for UV Index
+
+// $("#enterCity").on("click", function() {
+//   return getUVIndex();
+
+//   });
 
 
-function setLocalStorage(){
+// function getUVIndex(){
 
-let store = $("#city").val();
+// var city = $("#city").val();
 
-localStorage.setItem('cityName', store); 
+// var queryUVIndex = "http://api.openweathermap.org/data/2.5/uvi?appid=6b4758acdbe25a3b3e8b792b8978ee96&lat=37.75&lon=-122.37"
 
-}
+// if (city != ''){
+
+//     $.ajax({
+//       url: queryUVIndex, 
+//       type: "GET",
+//       dataType: "jsonp",
+//       success: function(data){
+//           var application = results(data) 
+
+//         $("#displayWeather").html(application);
+//         $("#city").val('');
+
+//       }
+
+//     })
+
+//   }
+
+// }
+
+// // Current Weather from OpenWeather
+
+// function results(data){
+//   "<p>UVIndex: " + data.value + "</p>"
+
+// }
+
+
+
+
+// function setLocalStorage(){
+
+// let store = $("#city").val();
+
+// localStorage.setItem('cityName', store); 
+
+// }
 
