@@ -1,4 +1,7 @@
 
+$(document).ready(function(){
+
+
 $("#enterCity").on("click", function() {
 
   return getForecast();
@@ -42,11 +45,8 @@ var queryForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + city
              $("#displayForecast").html(table);
              $("#city").val('');
      })
-
-   
-
+  
 }
 
-
-
+});
 

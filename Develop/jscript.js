@@ -1,17 +1,11 @@
 
-
+$(document).ready(function(){
 
 $("#enterCity").on("click keydown", function() {
      
   return getWeather();
 
 });
-
-
-
-var lat;
-var lon;
-
 
 
 
@@ -24,10 +18,7 @@ $(".container").show();
 var city = $("#city").val();
 
 
-
 var queryCity = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=6b4758acdbe25a3b3e8b792b8978ee96"
-
-
 
 
   $.ajax({
@@ -37,6 +28,8 @@ var queryCity = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&
         var application = cityResults(city) 
 
       $("#displayWeather").html(application);
+
+      // Run API for UV Index - Use Current Weather API for LAT/Long
       
       var queryUVIndex = "http://api.openweathermap.org/data/2.5/uvi?appid=6b4758acdbe25a3b3e8b792b8978ee96&lat="+ city.coord.lat + "&lon=" + city.coord.lon
 
@@ -54,13 +47,12 @@ var queryCity = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&
 
             });
 
-
+              //Functions to display Current Weather and UVIndex Results
+              
             var currentDate = moment().format("MMM Do YY");
 
             function cityResults(city){
-              const lat = city.coord.lat
-      
-              const lon = city.coord.lon
+              
         
               
               return "<h2>" + city.name + ", " + city.sys.country + " - " + currentDate + "</h2>" + 
@@ -79,13 +71,12 @@ var queryCity = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&
 
   
 
+function setLocalStorage(){
 
+let store = $("#city").val();
 
-// function setLocalStorage(){
+localStorage.setItem('cityName', store); 
 
-// let store = $("#city").val();
+}
 
-// localStorage.setItem('cityName', store); 
-
-// }
-
+});
