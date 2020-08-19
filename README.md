@@ -1,1 +1,3 @@
-# 07-WeatherApp
+Weather app to display Current Weather and a 5 day forecast.  
+
+Instead of cards I opted for a table. I wanted to format the html page in this way so everything unhides and pops downward.  Also opted not to append any data, it seemed more of a challenge to insert elements. The one objective I could not get to or complete was the past city search, ran out of time to complete the forecast portion. Next to setting up local storage this was the biggest challenge.    

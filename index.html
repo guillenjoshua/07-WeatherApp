@@ -27,7 +27,7 @@
 
   <div class = "jumbotron">
 
-    <h2 class="text-center">Current Weather with 5-Day Forecast</h2>
+    <h2 class="text-center">Current Weather and 5-Day Forecast</h2>
   
   </div>
 
@@ -37,7 +37,9 @@
        
   <div class="row form-group form-inline col-md-5" id="cityDiv">
     <input type="text" name="city" class="form-control" id="city" placeholder="City Name">
-    <button  id="enterCity" class="fa fa-search btn btn-primary" onclick="setLocalStorage()">
+    <button  id="enterCity" class="fa fa-search btn btn-primary"></button> <br>
+      <ul class="list-group"  id="citySearch">
+      </ul>
 </div>
 
 
@@ -63,12 +65,16 @@
             <tbody id="displayForecast">
 
 
+
+
             </tbody>
 
       </table>
 
 
 </div>
+
+
 
 
 
