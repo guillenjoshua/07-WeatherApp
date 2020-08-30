@@ -24,7 +24,7 @@ $(document).ready(function () {
 
       // Run API for UV Index - Use Current Weather API for LAT/Long
 
-      var queryUVIndex = "http://api.openweathermap.org/data/2.5/uvi?appid=6b4758acdbe25a3b3e8b792b8978ee96&lat=" + city.coord.lat + "&lon=" + city.coord.lon
+      var queryUVIndex = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/uvi?appid=6b4758acdbe25a3b3e8b792b8978ee96&lat=" + city.coord.lat + "&lon=" + city.coord.lon
 
       $.ajax({
         url: queryUVIndex,
