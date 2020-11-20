@@ -1,3 +1,27 @@
-Weather app to display Current Weather and a 5 day forecast.  
+# Weather-App
 
-Instead of cards I opted for a table. I wanted to format the html page in this way so everything unhides and pops downward.  Also opted not to append any data, it seemed more of a challenge to insert elements. The one objective I could not get to or complete was the past city search, ran out of time to complete the forecast portion. Next to setting up local storage this was the biggest challenge.    
+## Description
+
+The Weather App is a simple app that allows you to search for a city's current weather and 5 day forecast.  name.       
+
+## Technologies
+The Weather App was created by utilizing HTML, CSS and JavaScript.  OpenWeather API calls for the forecast are made with AJAX and moment.js to set the date and time.  
+
+## Usage
+
+Simply input the city you would like to gather forecast data from and hit the search button.  The page will populate with your request.   
+
+## Weather-App GitHub Link
+https://github.com/guillenjoshua/07-WeatherApp
+
+## Author
+Joshua Guillen
+
+### GitHub Profile: 
+https://github.com/guillenjoshua
+
+### Email Contact: 
+guillenjoshua@gmail.com
+
+## IMG
+![](img/weather.png)
